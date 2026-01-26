@@ -23,7 +23,7 @@
 # # eval() # tries to figure out the best type
 
 # # if
-# age = 12
+age = 12
 
 # if age > 20:
 #     print("The twenties are the best years of your life")
@@ -33,24 +33,24 @@
 #     print("You are still a child :)")
 
 
-# if age >= 18:
-#     print("adult")
-# elif age >= 13:
-#     print("teenager")
-# else:
-#     print("child")
+if age >= 18:
+    print("adult")
+elif age >= 13:
+    print("teenager")
+else:
+    print("child")
 
-# # hurd premium
+# hurd premium
 
-# student = input("Are you a current USU student: (Y/N)")
-# hurdP = input("Do you have Hurd Premium: (Y/N)")
+student = input("Are you a current USU student: (Y/N)")
+hurdP = input("Do you have Hurd Premium: (Y/N)")
 
-# if student == "Y":
-#     print("You get into the game free!")
-# if hurdP == "Y":
-#     print("You get into the game 15 minutes early!")
-# else:
-#     print("You need to buy a ticket. They're not too expensive!")
+if student == "Y":
+    print("You get into the game free!")
+if hurdP == "Y":
+    print("You get into the game 15 minutes early!")
+else:
+    print("You need to buy a ticket. They're not too expensive!")
 
 # min, max, range
 
