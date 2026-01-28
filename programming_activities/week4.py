@@ -35,3 +35,23 @@ while user_age>0:
     current_year-=1
 else:
     print(f"You were born in {current_year}")
+
+
+"""
+Programming Activity 3
+
+Write a program that prints all the multiples of 5, from 5 to 95 using a for loop. 
+"""
+for i in range(5, 100, 5):
+    print("i:", i)
+
+"""
+Programming Activity 4
+
+Write a program that prints all the multiples of 5, from 5 to 95 using a while loop.
+"""
+
+num = 5
+while num < 96:
+    print("num:", num)
+    num += 5
