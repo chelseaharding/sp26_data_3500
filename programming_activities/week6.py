@@ -21,6 +21,11 @@ Create a list that stores 10 random integers. Start with an empty list, then use
 - Create an empty list.
 - For loop 10 times and append a random number each time.
 """
+import random
+
+rand_nums = []
+for i in range(10):
+    rand_nums.append(random.randint(1, 100))
 
 """
 Programming Activity 4 
@@ -33,3 +38,14 @@ Using the list you generated in programming activity 3, extend your program to c
 - No matter which way you chose you need to:
 - Each iteration in the loop check if the current number and next number are both even.
 """
+count = 0
+print(rand_nums)
+for num in rand_nums:
+    if count > 0:
+      # print("num:", rand_nums[count])
+      # print("previous num:", rand_nums[count - 1])
+      if rand_nums[count] % 2 == 0 and rand_nums[count - 1] % 2 == 0:
+            print(rand_nums[count])
+            print(rand_nums[count -1])
+            print("two evens in a row")
+    count += 1
