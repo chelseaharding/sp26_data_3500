@@ -56,7 +56,7 @@
 
 
 
-
+# non-list comprehension way to load in my prices
 with open("/workspaces/sp26_data_3500/lecture_code/TSLA.txt") as file:
     lines = file.readlines()
 
@@ -65,6 +65,36 @@ for line in lines:
     line = float(line)
     prices.append(line)
 
+# reverse the prices since they load in backwards from NASDAQ
 prices = prices[::-1]
 
+# list comprehension to load in my proces
 daily_prices = [float(line) for line in open("/workspaces/sp26_data_3500/lecture_code/TSLA.txt").readlines()]
+
+# reverse the prices since they load in backwards from NASDAQ
+prices = prices[::-1]
+
+# counter to determine when to start analysis
+i = 0
+buy = 0
+for price in daily_prices:
+    if i > 5:
+        # price                 these should be the same number
+        # daily_prices[i]
+        moving_avg = (daily_prices[i-1] + daily_prices[i-2] + daily_prices[i-3] + daily_prices[i-4] + daily_prices[i-5]) / 5
+
+        if price < moving_avg * 0.98:
+            pass
+            #buy
+            #update buy variable
+            #update first_buy variable if this is the first time you buy
+        elif price > moving_avg * 1.02:
+            pass
+            #sell
+            #calculate profit of this individual trade
+            #keep a running total of all profit
+        else:
+            pass
+            # do nothing this iteration
+
+    i += 1
